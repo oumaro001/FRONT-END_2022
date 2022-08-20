@@ -1,0 +1,131 @@
+
+/*----------ANIMATION POUR LA PAGE ASTO------------*/
+
+@keyframes astronaut-move {
+    0%{
+        transform: 
+        translate(-1200px, 550px)
+        rotate(0deg);
+    }
+
+   
+    100%{
+        transform: 
+        translate(-00px, -150px)
+        rotate(-360deg);
+    }
+    
+}
+
+@keyframes ship-move {
+    25%{
+        transform: scale(.5)
+        translate(-170px, -25px);
+    }
+
+    50%, 100%{
+        transform: scale(4)
+        translate(500px, 300px);
+    }
+}
+
+
+@keyframes stars-rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes comet-move {
+    to{
+        transform: 
+        translate(1800px, 750px);
+        filter: hue-rotate(360deg);
+    }
+}
+/*----------ANIMATION POUR LES VAGUES------------*/
+
+@keyframes vagueMove1 {
+    to{
+        margin-top: -10px;
+
+
+    }
+
+    from{
+        margin-top: -31px;
+
+    }
+}
+
+@keyframes vagueMove2 {
+    to{
+        margin-top: -10px;
+        
+    }
+
+    from{
+        margin-top: 0px;    }
+}
+
+
+/*----------ANIMATION POUR LE BATEAU------------*/
+
+@keyframes bateauMove {
+    to{
+        transform: translateX(-1500px);
+
+    }
+
+    from{
+        transform: translateX(410px);
+    
+    }
+}
+
+
+@keyframes bateauMove2 {
+
+    to{
+        bottom: 65px;
+}
+
+from{
+
+    bottom: 80px;
+}
+
+}
+
+
+/*----------ANIMATION POUR LES OISEAUX------------*/
+
+@keyframes oiseauxMove {
+    to{
+        transform: translateX(-410px);
+      
+    }
+
+    from{
+        transform: translateX(1500px);
+        
+    }
+}
+
+
+/*----------ANIMATION POUR LES NUAGES------------*/
+
+@keyframes nuageMove {
+    to{
+        transform: translateY(0px);
+
+    }
+
+    from{
+        transform: translateY(20px);
+        
+    }
+}
+
+

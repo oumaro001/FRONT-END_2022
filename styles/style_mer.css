@@ -1,0 +1,244 @@
+@import url('animation.css');
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+
+    background-color: rgb(197, 224, 235) !important;
+    position: relative;
+    padding-bottom: 625px;
+    min-height: 100%;
+
+}
+
+
+/*----------------------------VAGUE BLEU-------------------------*/
+
+.ocean_1 {
+
+    background-color: rgb(38, 193, 255);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+
+
+}
+
+.vagueOcean1 {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.vagueBleu {
+
+    width: 25em;
+    height: 105px;
+    background-color: rgb(38, 193, 255);
+    margin-top: -31px;
+    border-radius: 129%;
+    
+
+}
+
+/*--------------------------VAGUE BLANC--------------------*/
+
+
+.ocean_2 {
+
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 9px;
+    width: 100%;
+    height: 90px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+
+}
+
+.vagueOcean2 {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.vagueBlanc {
+
+    width: 25em;
+    height: 105px;
+    background-color: rgb(255, 255, 255);
+    margin-top: -31px;
+    border-radius: 129%;
+
+}
+
+/*--------------------------VAGUE GRIS--------------------*/
+
+
+.ocean_3 {
+
+    background-color: rgba(230, 230, 230, 0.815);
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 90px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+
+}
+
+.vagueOcean3 {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.vagueGris {
+
+    width: 25em;
+    height: 105px;
+    background-color: rgba(230, 230, 230, 0.815);
+    margin-top: -31px;
+    border-radius: 129%;
+
+}
+
+
+/************** LES ANIMATIONS DES VAGUES **********************/
+
+/*----VAGUE BLANC-------*/
+.vagueBlanc:nth-child(1),.vagueBlanc:nth-child(3),.vagueBlanc:nth-child(5){
+
+    animation: vagueMove1 1000ms  forwards infinite alternate;
+}
+
+.vagueBlanc:nth-child(2),.vagueBlanc:nth-child(4){
+
+    animation: vagueMove1 2000ms 1500ms forwards infinite alternate;}
+
+/*----VAGUE BLEU-------*/
+.vagueBleu:nth-child(2),.vagueBleu:nth-child(4),.vagueBleu:nth-child(6),.vagueBleu:nth-child(8){
+
+    animation: vagueMove1 1000ms  forwards infinite alternate;
+
+}
+
+.vagueBleu:nth-child(1),.vagueBleu:nth-child(3),.vagueBleu:nth-child(5),.vagueBleu:nth-child(7){
+
+    animation: vagueMove1 2000ms 1s forwards infinite alternate;
+
+}
+
+
+/*----VAGUE GRIS-------*/
+.vagueGris:nth-child(1),.vagueGris:nth-child(3),.vagueGris:nth-child(5){
+
+    animation: vagueMove1 1000ms 1500ms forwards infinite alternate;
+}
+
+.vagueGris:nth-child(2),.vagueGris:nth-child(4){
+
+    animation: vagueMove1 2000ms forwards infinite alternate;
+}
+
+
+
+/************** LE BATEAU **********************/
+
+.bateau img{
+
+    max-width: 20rem;
+    animation: bateauMove 15s forwards infinite ease-in-out;
+}
+
+.bateau {
+
+    
+    position: absolute;
+    right: 0;
+    animation: bateauMove2 1500ms  forwards infinite alternate;
+}
+
+/************** LES OISAEUX **********************/
+
+.oiseaux{
+
+    max-width: 8rem;
+    animation: oiseauxMove 15s forwards infinite ease-in-out reverse;
+    bottom: 20px;
+
+}
+
+.blockOiseau{
+
+    position: absolute;
+    top: 160px;
+}
+
+
+
+/************** LES NUAGES **********************/
+
+
+.nuage{
+
+
+    animation: nuageMove 2s forwards infinite alternate;
+}
+
+.nuage1,.nuage2,.nuage3{
+
+    width: 13em;
+    margin: 0 80px;
+}
+
+
+
+/*********************$$ RESPONSIVE DESIGN *******************************/
+
+
+@media screen and (max-width: 1000px) 
+{
+    
+    img{
+
+        max-width: 7em;
+    }
+
+    .oiseaux{
+
+        
+        display: none;
+    }
+
+    .bateau{
+
+        position: absolute;
+        bottom: 100px;
+    }
+    
+    .bateau > img{
+
+        max-width: 5em;
+        animation: none;
+    }
+
+   
+}
+
+
+

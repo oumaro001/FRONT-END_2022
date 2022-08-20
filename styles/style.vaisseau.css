@@ -1,0 +1,77 @@
+body{
+
+    background-image: url('/assets/vaisseau/astronomy.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-color: black !important;
+   
+}
+
+
+.tracker{
+
+    position: fixed;
+    transform:translate(350%, 150%);
+    width: 80px;
+    z-index: 9999;
+    pointer-events: none;
+    transition: all .15s;
+    border: 2px solid greenyellow;
+    border-radius: 20px;
+    padding: 5px;
+    animation: color-rotate 10s forwards ;
+
+}
+
+.tracker img {
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.alert{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50px;
+    margin-top: 200px;
+    font-size: 4rem;
+    animation: opacity 10s forwards;
+}
+
+.alert p{
+
+    color: white;
+}
+
+
+@keyframes color-rotate {
+    to{
+        border: 2px solid powderblue;
+    }
+
+    100%{
+        border: none;
+        
+        
+    }
+}
+
+@keyframes opacity {
+    to{
+        opacity: 0;
+    }
+    
+}
+
+@keyframes stars-rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
